@@ -1,10 +1,16 @@
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content">
+
 <% if @groups.length > 0 %>
   <% @groups.each do |group| %>
     <h2><a href="/groups/<%= group.id %>"><%= group.name %></a></h2>
     <form method="POST" action="/groups/join"
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Join me!</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Join me!</button>
+    </form>
   <% end %>
 <% else %>
   <h2>No groups found!</h2>
   <a href="/">Back to home</a>
 <% end %>
+
+</main>
