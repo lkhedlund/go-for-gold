@@ -13,7 +13,8 @@ class AddInitialTables < ActiveRecord::Migration
     end
     create_table :activities do |t|
       t.string :name
-      t.datetime :time
+      t.string :date
+      t.string :time
       t.string :location
       t.boolean :completed
       t.integer :group_id

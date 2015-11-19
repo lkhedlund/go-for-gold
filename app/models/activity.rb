@@ -5,8 +5,6 @@ class Activity < ActiveRecord::Base
 
   validates :name,
     presence: true
-  validates :time,
-    presence: true
   validates :location,
     presence: true
   validates :completed,

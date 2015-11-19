@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 20151119164543) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
-    t.datetime "time"
+    t.string   "date"
+    t.string   "time"
     t.string   "location"
     t.boolean  "completed"
     t.integer  "group_id"
