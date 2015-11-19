@@ -1,4 +1,7 @@
-<h1>Results</h1>
+<div class="mdl-grid">
+  <div class="mdl-cell--stretch"> Search Results</div>
+</div>
+<div class="mdl-grid">
 <% @groups.each do |group| %>
   <p><%= group.name %></p>
   <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Join me!</button>
@@ -10,4 +13,4 @@
     <label class="mdl-textfield__label" for="sample3" name="group_name">Group name...</label>
   </div>
 </form>
-</form>
+</div>
