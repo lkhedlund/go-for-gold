@@ -4,6 +4,8 @@ get '/' do
 end
 
 get '/results' do
+  @groups = Group.all
+  unless params[:search_term]
   @groups = Group.where(name: params[:group_name])
   puts @groups.inspect
   erb :results
