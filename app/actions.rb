@@ -4,10 +4,7 @@ get '/' do
 end
 
 get '/results' do
-  puts "You've made it"
-end
-
-post '/search' do
-  puts params
-  redirect '/results'
+  @groups = Group.where(name: params[:group_name])
+  puts @groups.inspect
+  erb :results
 end
