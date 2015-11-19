@@ -1,16 +1,10 @@
-<div class="mdl-grid">
-  <div class="mdl-cell--stretch"> Search Results</div>
-</div>
-<div class="mdl-grid">
-<% @groups.each do |group| %>
-  <p><%= group.name %></p>
-  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Join me!</button>
+<% if @groups.length > 0 %>
+  <% @groups.each do |group| %>
+    <h2><a href="/groups/<%= group.id %>"><%= group.name %></a></h2>
+    <form method="POST" action="/groups/join"
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Join me!</button>
+  <% end %>
+<% else %>
+  <h2>No groups found!</h2>
+  <a href="/">Back to home</a>
 <% end %>
-<p>Want to create a new group?</p>
-<form method="post" action="/groups/new">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="sample3">
-    <label class="mdl-textfield__label" for="sample3" name="search_term">Group name...</label>
-  </div>
-</form>
-</div>

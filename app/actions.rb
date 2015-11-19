@@ -5,19 +5,28 @@ end
 
 get '/results' do
   @groups = Group.all
-  unless params[:search_term]
-  @groups = Group.where(name: params[:group_name])
-  puts @groups.inspect
+  unless params[:search_term].blank?
+    term = "%#{params[:search_term]}%"
+    @groups = @groups.where('name LIKE :term', { term: term })
+  end
   erb :results
 end
 
-post '/groups/new' do
-  Group.create(
-    name: params[:group_name]
+get '/groups/new' do
+  erb :'groups/new'
+end
+
+post '/groups' do
+  group = Group.new(
+    name: params[:name]
   )
-  puts "Successfully created!"
+  if group.save
+    redirect "/results?search_term=#{group.name}"
+  else
+    redirect '/groups/new'
+  end
 end
 
 post '/groups/join' do
-  #more to come!
+
 end
