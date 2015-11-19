@@ -8,3 +8,14 @@ get '/results' do
   puts @groups.inspect
   erb :results
 end
+
+post '/groups/new' do
+  Group.create(
+    name: params[:group_name]
+  )
+  puts "Successfully created!"
+end
+
+post '/groups/join' do
+  #more to come!
+end
