@@ -37,7 +37,7 @@ end
 
 get '/groups/:group_id/activities/new' do
   @activity = Activity.new
-  erb :'groups/group_id/activities/new'
+  erb :'groups/activities/new'
 end
 
 post '/groups/:group_id/activities/create' do
@@ -49,12 +49,12 @@ post '/groups/:group_id/activities/create' do
   if @activity.save
     redirect '/groups/#{:group_id}'
   else
-    erb :'groups/group_id/activities/new'
+    erb :'groups/activities/new'
   end
 end
 
 get '/groups/:group_id/activities/:id' do
   @activity = Activity.find params[:id]
-  erb :'groups/group_id/activities/show'
+  erb :'groups/activities/show'
 end
 
