@@ -31,8 +31,17 @@ ActiveRecord::Schema.define(version: 20151119164543) do
   end
 
   create_table "rsvps", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "activity_id"
+    t.integer  "user_id"
+    t.integer  "activity_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "usergroups", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "user_groups", force: :cascade do |t|
@@ -47,9 +56,9 @@ ActiveRecord::Schema.define(version: 20151119164543) do
     t.string   "city"
     t.string   "picture"
     t.string   "description"
+    t.string   "badge_count"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "badge_count"
   end
 
 end

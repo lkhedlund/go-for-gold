@@ -5,6 +5,7 @@ class AddInitialTables < ActiveRecord::Migration
       t.string :city
       t.string :picture
       t.string :description
+      t.string :badge_count
       t.timestamps
     end
     create_table :groups do |t|
@@ -20,7 +21,7 @@ class AddInitialTables < ActiveRecord::Migration
       t.integer :group_id
       t.timestamps
     end
-    create_table :user_groups do |t|
+    create_table :usergroups do |t|
       t.integer :user_id
       t.integer :group_id
       t.timestamps
