@@ -8,6 +8,10 @@ User.create name: "David", city: "Vancouver", picture: "https://lighthouselabs.c
 
 Group.create name: "Gold Diggers"
 
+Group.create name: "LHL"
+
+Group.create name: "Launch Academy"
+
 Activity.create name: "Skiing", date: "2015/11/20", time: "9:00", location: "Whistler Mountain, Whistler", completed: false, group_id: 1
 
 Activity.create name: "Hiking", date: "2015/11/25", time: "14:00", location: "Stawamus Chief, Squamish", completed: false, group_id: 1
@@ -18,6 +22,10 @@ Usergroup.create user_id: 1, group_id: 1
 
 Usergroup.create user_id: 2, group_id: 1
 
-Usergroup.create user_id: 3, group_id: 1
+Usergroup.create user_id: 3, group_id: 2
 
-Usergroup.create user_id: 4, group_id: 1
+Usergroup.create user_id: 4, group_id: 2
+
+Usergroup.create user_id: 1, group_id: 3
+
+Usergroup.create user_id: 3, group_id: 3
