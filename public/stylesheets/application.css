@@ -57,15 +57,16 @@ html, body {
   max-width: 1080px;
 }
 
-/* Cards */
+/* Full Page */
 
-.main-card-wide.mdl-card {
+.full-card-wide.mdl-card {
   width: 1080px;
 }
-.main-card-wide > .mdl-card__title {
-  height: 230px;
-  background: url('/images/gold-medal.jpg') center / cover;
+.full-card-wide > .mdl-card__title {
+  min-height: 400px;
 }
+
+/* Group cards */
 
 .group-card-wide.mdl-card {
   width: 1080px;
@@ -76,6 +77,7 @@ html, body {
   background: url('/images/gold-medal.jpg') center / cover;
 }
 
+/* Result cards */
 
 .result-card-square.mdl-card {
   width: 320px;
@@ -86,6 +88,8 @@ html, body {
   background: #46B6AC;
 }
 
+/* Form Cards */
+
 .form-card.mdl-card {
   color: #fff;
   width: 320px;
@@ -95,6 +99,8 @@ html, body {
 .form-card > .mdl-textfield__label {
   color: #b3b3b3;
 }
+
+/* Activity cards */
 
 .activity-card-event.mdl-card {
   width: 256px;

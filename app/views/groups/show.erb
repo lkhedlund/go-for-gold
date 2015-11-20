@@ -10,10 +10,9 @@
     <% @group.activities.each do |activity| %>
        <div class="activity-card-event mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
          <div class="mdl-card__title mdl-card--expand">
-            <h3><%= activity.name %><br>
-              <%= activity.date %><br>
-              <%= activity.time %><br>
-              <%= activity.location %></h3>
+            <h4><%= activity.name %>:<br>
+              <%= activity.date %> @ <%= activity.time %><br>
+              <%= activity.location %></h4>
           </div>
           <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
