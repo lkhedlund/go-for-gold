@@ -1,8 +1,20 @@
 <%= erb :'_drawer' %>
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-grid content">
+    <div class="main-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Welcome</h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        Are you ready to be the best at sportsing? Search for a group to join in the menu bar or create a new group below:
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="/groups/new">
+          Create a group
+        </a>
+      </div>
+    </div>
 
-    <h3>Search for a group</h3>
-    <h1>OR</h1>
-    <h3><a href="/groups/new">Create a new one!</a></h3>
+
 
 </main>
