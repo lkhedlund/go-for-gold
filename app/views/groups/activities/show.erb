@@ -1,5 +1,5 @@
-<h1><%= @activity.name %></h1>
-
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content">
 <div class="mdl-grid">
 <div class="mdl-cell--middle mdl-cell--6-col">
 <h1><%= @activity.name %></h1>
@@ -12,9 +12,11 @@
 <p>
   Location: <%= @activity.location %>
 </p>
-<a href="/groups/:group_id"><i class="material-icons">keyboard_backspace</i></a>
+<a href="/groups/<%= @group_id %>"><i class="material-icons">keyboard_backspace</i></a>
 </div>
 </div>
+
+</main>
 
 
 
