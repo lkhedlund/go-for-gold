@@ -1,0 +1,39 @@
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content">
+
+<h1>Edit event</h1>
+
+<div class="mdl-grid">
+<div class="mdl-cell--middle mdl-cell--4-col">
+
+<form method="post" action=<%="/groups/"+@group_id%>>
+
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="name">Name... 
+    </label>
+    <input class="mdl-textfield__input" type="text" name="name" value="<%= @activity.name %>">
+  </div>
+  
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="name">Date...</label>
+    <input class="mdl-textfield__input" type="text" name="date" value="<%= @activity.date %>">
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="time">Time...</label>
+    <input class="mdl-textfield__input" type="text" name="time" value="<%= @activity.time %>">
+  </div>
+  
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="location">Location...</label>
+    <input class="mdl-textfield__input" type="text" name="location" value="<%= @activity.location %>">
+  </div>
+  
+  <p>
+    <button type="submit" value="Submit" class="btn btn-default">Update</button>
+  </p>
+</form>
+</div>
+</div> 
+
+</main>
