@@ -1,12 +1,3 @@
-get '/results' do
-  @groups = Group.all
-  unless params[:search_term].blank?
-    term = "%#{params[:search_term]}%"
-    @groups = @groups.where('name LIKE :term', { term: term })
-  end
-  erb :results
-end
-
 get '/groups/:id' do |id|
   @group = Group.find(id)
 	session[:group_users] = @group.users.all
