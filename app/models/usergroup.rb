@@ -1,7 +1,4 @@
-class UserGroup < ActiveRecord::Base
-  def table_name
-    'users_groups'
-  end
+class Usergroup < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :group
