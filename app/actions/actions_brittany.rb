@@ -1,8 +1,3 @@
-get '/groups/:group_id' do |id|
-  @group = Group.find(id)
-  erb :'groups/show'
-end
-
 get '/groups/:group_id/activities/new' do
   @group_id = params[:group_id]
   @activity = Activity.new
@@ -30,4 +25,3 @@ get '/groups/:group_id/activities/:id' do
   @activity = Activity.find params[:id]
   erb :'groups/activities/show'
 end
-
