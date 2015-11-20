@@ -2,17 +2,19 @@
   <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-grid content">
 
-  <div class="form-card-wide mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col">
-    <div class="mdl-card__supporting-text mdl-color-text--white">
-        <h3>Create a new group</h3>
-        <div class="mdl-textfield mdl-js-textfield">
-        <form method="post" action="/groups">
-          <input class="mdl-textfield__input" type="text" name="name" id="group">
-          <label class="mdl-textfield__label" for="group">Group Name...</label>
+    <div class="form-card mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+      <div class="mdl-card__supporting-text mdl-color-text--white">
+          <h3>Create a new group</h3>
+          <div class="mdl-card__actions mdl-card--border">
+          <div class="mdl-textfield mdl-js-textfield">
+            <form method="post" action="/groups">
+              <input class="mdl-textfield__input" type="text" name="name" id="group">
+              <label class="mdl-textfield__label" for="group">Group Name...</label>
+            </form>
+          </div>
         </div>
-        </form>
       </div>
-    </div>
+    </div>`
     <% if @current_user.groups.length > 0 %>
         <% @current_user.groups.each do |group| %>
         <div class="result-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">

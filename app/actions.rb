@@ -10,11 +10,16 @@ helpers do
     #@current_user = User.find(session[:user_id]) if session[:user_id]
 	end
 
+	def group_users
+		session[:group_users] = []
+	end
+
 end
 
 before do
 	current_user
 	handle_errors
+	group_users
 end
 
 get '/' do
@@ -30,12 +35,9 @@ get '/results' do
   erb :results
 end
 
-get '/groups/new' do
-  erb :'groups/new'
-end
-
 get '/groups/:id' do |id|
   @group = Group.find(id)
+	session[:group_users] = @group.users.all
   erb :'groups/show'
 end
 

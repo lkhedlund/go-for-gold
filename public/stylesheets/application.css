@@ -75,12 +75,12 @@ html, body {
   background: #46B6AC;
 }
 
-.form-card-wide.mdl-card {
+.form-card.mdl-card {
   color: #fff;
   width: 320px;
   height: 320px;
 }
 
-.form-card-wide.mdl-card > .mdl-textfield__label {
-  color: #fff;
+.mdl-textfield__label {
+  color: #b3b3b3;
 }
