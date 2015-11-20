@@ -1,0 +1,49 @@
+    <div style="float:left; width:70%;">
+      <h2 align="right" >GROUP NAME: <%= @group.name %> </h2>
+      <div align="center">
+      <button> + </button>
+           <% @group.activities.each do |activity| %>
+      <p></p>
+       <div class="section demo-card-event mdl-card mdl-shadow--2dp"> 
+            <h3><%= activity.name %></h3>
+            <p>
+              <%= activity.date %>
+            </p>
+            <p>
+              <%= activity.time %>
+            </p>
+            <p>
+              <%= activity.location %>
+            </p>
+          <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Add to Calendar
+          </a>
+          <div class="mdl-layout-spacer"></div>
+          <i class="material-icons">event</i>
+        </div>
+        </div>
+        <% end %>
+        </div>
+ </div>
+   <div style="float:right; width:20%; ">
+      <h2>USERS and Ranks</h2>
+        <% @group.users.each do |user| %>
+      <p></p>
+      <div class="section demo-card-event mdl-card mdl-shadow--2dp">
+        <div margin: 10px> 
+            <h3><%= user.name %></h3>
+            <div align="center">
+            <img src="<%= user.picture %>" width="80" height="80" />
+            </div>
+            <div align="center">
+              <%= user.city %>
+            </div>
+            <div align="center">
+              <%= user.description %>
+            </div>
+            <div align="center">
+              <%= user.badge_count %>
+            </div>
+  </div> 
+  <% end %>
