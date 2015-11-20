@@ -10,7 +10,9 @@ class User < ActiveRecord::Base
   validates :city,
     presence: true
   validates :picture,
+
     format: { with: /.*(.png|.jpe?g|.gif|.JPE?G|.GIF|.PNG)/ }
+
   validates :description,
     presence: true
 
