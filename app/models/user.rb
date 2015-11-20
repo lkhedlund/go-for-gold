@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
-  has_many :groups, through: :users_groups
+  has_many :usergroups
+  has_many :groups, through: :usergroups
+  has_many :rsvps
   has_many :activities, through: :rsvps
 
   validates :name,
@@ -8,7 +10,7 @@ class User < ActiveRecord::Base
   validates :city,
     presence: true
   validates :picture,
-    format: { with: /.*(.png|.jpe?g|.gif|.JPG)/ }
+    format: { with: /.*(.png|.jpe?g|.gif|.JPE?G|.GIF|.PNG)/ }
   validates :description,
     presence: true
 
