@@ -3,6 +3,13 @@ get '/groups/:group_id' do |id|
   erb :'groups/show'
 end
 
+put '/groups/:group_id/activities/:id' do |id|
+  @group_id = params[:group_id]
+  @activity = Activity.find(id)
+  @activity.update_attributes(params[:@activity])
+  redirect "/groups/:group_id/activities/:id"
+end
+
 get '/groups/:group_id/activities/new' do
   @group_id = params[:group_id]
   @activity = Activity.new
@@ -30,4 +37,11 @@ get '/groups/:group_id/activities/:id' do
   @activity = Activity.find params[:id]
   erb :'groups/activities/show'
 end
+
+get '/groups/:group_id/activities/:id/edit' do
+  @group_id = params[:group_id]
+  @activity = Activity.find params[:id]
+  erb :'groups/activities/edit'
+end
+
 

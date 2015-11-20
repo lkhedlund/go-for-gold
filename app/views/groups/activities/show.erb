@@ -1,22 +1,24 @@
-<%= erb :'_drawer' %>
-  <main class="mdl-layout__content">
 <div class="mdl-grid">
-<div class="mdl-cell--middle mdl-cell--6-col">
-<h1><%= @activity.name %></h1>
-  Date: <%= @activity.date %>
-</p>
-<p>
-  Time: <%= @activity.time %>
+  <div class="mdl-cell--middle mdl-cell--6-col">
+  
+  <h1><%= @activity.name %></h1>
+    
+    <p>
+      Date: <%= @activity.date %>
+    </p>
 
-</p>
-<p>
-  Location: <%= @activity.location %>
-</p>
-<a href="/groups/<%= @group_id %>"><i class="material-icons">keyboard_backspace</i></a>
-</div>
+    <p>
+      Time: <%= @activity.time %>
+    </p>
+    
+    <p>
+      Location: <%= @activity.location %>
+    </p>
+
+  <a href="/groups/<%= @group_id %>"><i class="material-icons">keyboard_backspace</i></a>
+  </div>
 </div>
 
-</main>
 
 
 
