@@ -1,0 +1,52 @@
+<h1>Who Are You?</h1>
+<hr/>
+
+<% if @current_user %>
+ <div>
+   <strong>Some issues with your upload, please fix them:</strong>
+   <ul>
+     <% @photo.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+   </ul>
+ </div>
+<% end %>
+
+<form method="post" action="/users">
+
+  <div>
+    <br>
+    <label>What do you look like?(Image URL)</label>
+    <br>
+    <input type="url" name="picture" placeholder=".png, .jpg, .gif">
+  </div>
+
+  <div>
+    <br>
+    <label>What's your name?</label>
+    <br>
+    <input type="text" name="name" placeholder="Jim, Bob, etc">
+  </div>
+
+  <div>
+  <br>
+  <label>Where are you?</label>
+  <br>
+    <input type="text" name="city" placeholder="Vancouver, Tihuana, etc">
+  </div>
+
+  <div>
+    <br>
+    <label>What do people need to know?</label>
+    <br>
+    <input type="text" name="description" placeholder="Professional water boiler">
+  </div>
+
+  <div>
+    <input type="Submit" value="Create!" class="btn btn-default">
+  </div>
+</form>
+
+<hr/>
+
+<strong>I changed my mind, <a href="/">I don't want to sign up</a></strong>
