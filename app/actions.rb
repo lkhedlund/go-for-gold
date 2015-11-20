@@ -1,9 +1,8 @@
 # Homepage (Root path)
 helpers do
-
   def current_user
    begin
-     @current_user = User.find(session[:id]) if session[:id]
+     @current_user = User.find(session[:user_id]) if session[:user_id]
    rescue ActiveRecord::RecordNotFound
      session[:id] = nil
    end
