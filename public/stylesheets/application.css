@@ -77,5 +77,10 @@ html, body {
 
 .form-card-wide.mdl-card {
   color: #fff;
-  width: 512px;
+  width: 320px;
+  height: 320px;
+}
+
+.form-card-wide.mdl-card > .mdl-textfield__label {
+  color: #fff;
 }

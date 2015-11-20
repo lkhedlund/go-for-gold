@@ -45,8 +45,6 @@ post '/groups' do
   )
   if group.save
     redirect "/results?search_term=#{group.name}"
-  else
-    redirect '/groups/new'
   end
 end
 
