@@ -12,14 +12,13 @@ get '/results' do
   erb :results
 end
 
-get '/groups/:id' do |id|
-  @group = Group.find(id)
-  @users = @group.users.all
-  erb :'groups/show'
-end
-
 get '/groups/new' do
   erb :'groups/new'
+end
+
+get '/groups/:id' do |id|
+  @group = Group.find(id)
+  erb :'groups/show'
 end
 
 post '/groups' do
