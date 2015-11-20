@@ -1,7 +1,7 @@
 <div class="mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
   <header class="drawer-header">
-    <img src="/mdl/user.jpg" class="avatar">
-    <span>hello@example.com</span>
+    <img src="<%= @current_user.picture %>" class="avatar">
+    <span><%= @current_user.name %></span>
     <div class="mdl-layout-spacer"></div>
   </header>
   <nav class="mdl-navigation mdl-color--blue-grey-800">
