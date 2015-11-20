@@ -1,12 +1,19 @@
 <h1><%= @activity.name %></h1>
-
-<p>
-  Date and Time: <%= @activity.time %>
+<div class="mdl-grid">
+<div class="mdl-cell--middle mdl-cell--4-col">
+  Date: <%= @activity.date %>
 </p>
+<p>
+  Time: <%= @activity.time %>
 
+</p>
 <p>
   Location: <%= @activity.location %>
 </p>
-
-<hr/>
 <a href="/groups/:group_id">Back to Group</a>
+</div>
+</div>
+
+
+
+

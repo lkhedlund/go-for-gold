@@ -1,23 +1,38 @@
 <h1>Create an activity</h1>
-
-<form method="post" action="groups/group_id">
-  <div>
+<div class="mdl-grid">
+<div class="mdl-cell--middle mdl-cell--6-col">
+<form method="post" action=<%="/groups/"+@group_id%>>
+  
+  <p>
     <label>Name:</label>
     <input type="text" name="name" value="<%= @activity.name %>">
-  </div>
+  </p>
   
-  <div>
-    <label>Date and Time:</label>
+  <p>
+    <label>Date:</label>
+    <input type="text" name="date" value="<%= @activity.date %>">
+  </p>
+
+  <p>
+    <label>Time:</label>
+
     <input type="text" name="time" value="<%= @activity.time %>">
-  </div>
+  </p>
   
-  <div>
+  <p>
     <label>Location:</label>
     <input type="text" name="location" value="<%= @activity.location %>">
-  </div>
+  </p>
+
+  <p>
+    <label>Group:</label>
+    <input type="text" name="group_id" value="<%= @activity.group_id %>">
+  </p>
   
-  <div>
+  <p>
     <button type="submit" value="Submit" class="btn btn-default">Create</button>
-   
-  </div>
-</form>  
+  </p>
+
+</form> 
+</div> 
+</div>
