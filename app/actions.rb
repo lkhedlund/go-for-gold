@@ -31,7 +31,3 @@ post '/groups/join' do
   #more to come!
 end
 
-get '/' do
-  erb :index
-end
-
