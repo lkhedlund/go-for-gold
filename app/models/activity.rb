@@ -9,8 +9,8 @@ class Activity < ActiveRecord::Base
   validates :location,
     presence: true
   validates :completed,
-    presence: true,
-    inclusion: { in: [true, false] }
+    inclusion: [true, false]
   validates :group_id,
     numericality: { only_integer: true }
+
 end
