@@ -1,6 +1,8 @@
 <h1><%= @activity.name %></h1>
+
 <div class="mdl-grid">
-<div class="mdl-cell--middle mdl-cell--4-col">
+<div class="mdl-cell--middle mdl-cell--6-col">
+<h1><%= @activity.name %></h1>
   Date: <%= @activity.date %>
 </p>
 <p>
@@ -10,7 +12,7 @@
 <p>
   Location: <%= @activity.location %>
 </p>
-<a href="/groups/:group_id">Back to Group</a>
+<a href="/groups/:group_id"><i class="material-icons">keyboard_backspace</i></a>
 </div>
 </div>
 

@@ -1,38 +1,34 @@
+
 <h1>Create an activity</h1>
+
 <div class="mdl-grid">
-<div class="mdl-cell--middle mdl-cell--6-col">
+<div class="mdl-cell--middle mdl-cell--4-col">
+
 <form method="post" action=<%="/groups/"+@group_id%>>
-  
-  <p>
-    <label>Name:</label>
-    <input type="text" name="name" value="<%= @activity.name %>">
-  </p>
-  
-  <p>
-    <label>Date:</label>
-    <input type="text" name="date" value="<%= @activity.date %>">
-  </p>
 
-  <p>
-    <label>Time:</label>
-
-    <input type="text" name="time" value="<%= @activity.time %>">
-  </p>
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="name">Name...</label>
+    <input class="mdl-textfield__input" type="text" name="name" value="<%= @activity.name %>">
+  </div>
   
-  <p>
-    <label>Location:</label>
-    <input type="text" name="location" value="<%= @activity.location %>">
-  </p>
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="name">Date...</label>
+    <input class="mdl-textfield__input" type="text" name="date" value="<%= @activity.date %>">
+  </div>
 
-  <p>
-    <label>Group:</label>
-    <input type="text" name="group_id" value="<%= @activity.group_id %>">
-  </p>
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="time">Time...</label>
+    <input class="mdl-textfield__input" type="text" name="time" value="<%= @activity.time %>">
+  </div>
+  
+  <div class="mdl-textfield mdl-js-textfield">
+    <label class="mdl-textfield__label" for="location">Location...</label>
+    <input class="mdl-textfield__input" type="text" name="location" value="<%= @activity.location %>">
+  </div>
   
   <p>
     <button type="submit" value="Submit" class="btn btn-default">Create</button>
   </p>
-
-</form> 
-</div> 
+</form>
 </div>
+</div> 
