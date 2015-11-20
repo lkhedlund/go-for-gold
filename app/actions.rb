@@ -3,6 +3,21 @@ get '/' do
   erb :index
 end
 
+# Homepage (Root path)
+# get '/groups' do
+#   erb :'groups/index'
+# end
+
+get '/groups/:id' do
+  # session['song_review'] = nil
+  # if session['username']
+    @group = Group.find(params[:id])
+    erb :'groups/show'    #before index
+  # else
+    # redirect '/'
+  # end
+end
+
 get '/results' do
   @groups = Group.where(name: params[:group_name])
   puts @groups.inspect

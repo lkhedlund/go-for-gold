@@ -1,7 +1,7 @@
 class UserGroup < ActiveRecord::Base
-  def table_name
-    'users_groups'
-  end
+  # def table_name
+  #   'users_groups'
+  # end
 
   belongs_to :user
   belongs_to :group

@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20151119164543) do
     t.integer "activity_id"
   end
 
+  create_table "user_groups", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "city"
@@ -43,13 +50,6 @@ ActiveRecord::Schema.define(version: 20151119164543) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "badge_count"
-  end
-
-  create_table "users_groups", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
