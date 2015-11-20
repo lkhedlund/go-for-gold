@@ -74,3 +74,8 @@ html, body {
   color: #fff;
   background: #46B6AC;
 }
+
+.form-card-wide.mdl-card {
+  color: #fff;
+  width: 512px;
+}

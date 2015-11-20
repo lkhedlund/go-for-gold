@@ -1,12 +1,19 @@
 <%= erb :'_drawer' %>
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-grid content">
 
-    <h1> Create a new group</h1>
+      <form method="post" action="/groups">
+      <div class="form-card-wide mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+        <div class="mdl-card__supporting-text mdl-color-text--white">
+            <h3>Create a new group</h3>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" name="name" id="group">
+              <label class="mdl-textfield__label" for="group">Group Name...</label>
+            </div>
+            <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">Submit</button>
+          </div>
+        </div>
+      </form>
 
-    <form method="post" action="/groups">
-      <label>Title:</label>
-      <input type="text" name="name">
-      <input type="submit" value="Submit">
-    </form>
-
+  </div>
 </main>
