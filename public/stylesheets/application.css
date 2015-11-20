@@ -126,3 +126,9 @@ html, body {
 .activity-card-event > .mdl-card__actions > .mdl-button {
   color: #fff;
 }
+
+/* Add Activity */
+.activity-button {
+  font-size: 70px;
+  padding: 100px;
+}
