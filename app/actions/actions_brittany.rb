@@ -51,3 +51,10 @@ get '/groups/:group_id/activities/:id/edit' do
   erb :'/groups/activities/edit'
 end
 
+get '/groups/:group_id/activities/:id/delete' do |group_id, id|
+  # @group_id = params[:group_id]
+  @activity = Activity.find(id)
+  @activity.destroy
+  redirect "/groups/#{group_id}"
+end
+

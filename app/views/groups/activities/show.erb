@@ -20,7 +20,12 @@
       Location: <%= @activity.location %>
     </p>
   <p>
-  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit">Edit activity</a>  
+
+  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Edit</a>
+
+  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/delete" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</a>
+
+  <!-- <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit">Edit activity</a>  --> 
   </p>
 
   <a href="/groups/<%= @group_id %>"><i class="material-icons">keyboard_backspace</i></a>
