@@ -4,6 +4,7 @@ put '/groups/:group_id/activities/:id' do |group_id, id|
   @activity.update_attributes(
   name: params[:name],
   time: params[:time],
+  date: params[:date],
   location: params[:location],
   completed: false,
   group_id: params[:group_id]
@@ -25,6 +26,7 @@ post '/groups/:group_id' do
   @group_id = params[:group_id]
   @activity = Activity.new(
   name: params[:name],
+  date: params[:date],
   time: params[:time],
   location: params[:location],
   completed: false,
