@@ -1,52 +1,35 @@
-<h1>Who Are You?</h1>
-<hr/>
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content mdl-color--grey-100"><div class="mdl-grid content">
+      <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+        <div class="mdl-card__supporting-text">
+        <h1>Who Are You?</h1>
+        <form method="post">
 
-<% if @current_user %>
- <div>
-   <strong>Some issues with your upload, please fix them:</strong>
-   <ul>
-     <% @photo.errors.full_messages.each do |message| %>
-       <li><%= message %></li>
-     <% end %>
-   </ul>
- </div>
-<% end %>
+          <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="name">What's your name?</label>
+            <input class="mdl-textfield__input" type="text" name="name" value="<%= @user.name %>">
+          </div>
 
-<form method="post" action="/users">
+          <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="name">Where are you?</label>
+            <input class="mdl-textfield__input" type="text" name="city" value="<%= @user.city %>">
+          </div>
 
-  <div>
-    <br>
-    <label>What do you look like?(Image URL)</label>
-    <br>
-    <input type="url" name="picture" placeholder=".png, .jpg, .gif">
+          <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="time">What do people need to know?</label>
+            <input class="mdl-textfield__input" type="text" name="description" value="<%= @user.description %>">
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <label class="mdl-textfield__label" for="location">What do you look like? (Image URL)</label>
+            <input class="mdl-textfield__input" type="text" name="picture" value="<%= @user.picture %>">
+          </div>
+
+    <div class="mdl-card__actions">
+      <button type="submit" value="Submit" class="btn btn-default">Create Yourself</button>
+        </form>
+    </div>
   </div>
+</div>
 
-  <div>
-    <br>
-    <label>What's your name?</label>
-    <br>
-    <input type="text" name="name" placeholder="Jim, Bob, etc">
-  </div>
-
-  <div>
-  <br>
-  <label>Where are you?</label>
-  <br>
-    <input type="text" name="city" placeholder="Vancouver, Tihuana, etc">
-  </div>
-
-  <div>
-    <br>
-    <label>What do people need to know?</label>
-    <br>
-    <input type="text" name="description" placeholder="Professional water boiler">
-  </div>
-
-  <div>
-    <input type="Submit" value="Create!" class="btn btn-default">
-  </div>
-</form>
-
-<hr/>
-
-<strong>I changed my mind, <a href="/">I don't want to sign up</a></strong>
+</div></main>
