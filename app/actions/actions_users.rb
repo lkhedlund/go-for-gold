@@ -31,6 +31,21 @@ get '/users/:id/edit' do |id|
   erb :'/users/edit'
 end
 
+put '/users/:id' do |id|
+  @user = User.find(id)
+  @user.update_attributes(
+  name: params[:name],
+  city: params[:city],
+  picture: params[:picture],
+  description: params[:description]
+  )
+  if @user.save
+    redirect "/users/#{@user.id}"
+  else
+    erb :'/users/edit'
+  end
+end
+
 # post '/users' do
 #   # binding.pry
 #   user = User.new(

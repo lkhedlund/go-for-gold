@@ -1,35 +1,38 @@
-<h1>Change Yourself</h1>
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content mdl-color--grey-100"><div class="mdl-grid content">
+      <div class="mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
+        <div class="mdl-card__supporting-text">
 
-<div class="mdl-grid">
-<div class="mdl-cell--middle mdl-cell--4-col">
+          <form method="post" action="/users/<%= @user_id %>">
+            <input type="hidden" name="_method" value="PUT" />
 
-<form method="post" action="/users/<%= @user_id %>">
-  <input type="hidden" name="_method" value="PUT" />
+            <div class="mdl-textfield mdl-js-textfield">
+              <label class="mdl-textfield__label" for="name">Change your name?
+              </label>
+              <input class="mdl-textfield__input" type="text" name="name" value="<%= @user.name %>">
+            </div>
 
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="name">Change your name?
-    </label>
-    <input class="mdl-textfield__input" type="text" name="name" value="<%= @user.name %>">
-  </div>
-  
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="date">Change your city?</label>
-    <input class="mdl-textfield__input" type="text" name="city" value="<%= @user.city %>">
-  </div>
+            <div class="mdl-textfield mdl-js-textfield">
+              <label class="mdl-textfield__label" for="date">Change your city?</label>
+              <input class="mdl-textfield__input" type="text" name="city" value="<%= @user.city %>">
+            </div>
 
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="time">Change your description?</label>
-    <input class="mdl-textfield__input" type="text" name="description" value="<%= @user.description %>">
-  </div>
-  
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="location">Change your look?(Image URL)</label>
-    <input class="mdl-textfield__input" type="text" name="picture" value="<%= @user.picture %>">
-  </div>
-  
-  <p>
-    <button type="submit" value="Submit" class="btn btn-default">Update Yourself</button>
-  </p>
-</form>
-</div>
-</div> 
+            <div class="mdl-textfield mdl-js-textfield">
+              <label class="mdl-textfield__label" for="time">Change your description?</label>
+              <input class="mdl-textfield__input" type="text" name="description" value="<%= @user.description %>">
+            </div>
+
+            <div class="mdl-textfield mdl-js-textfield">
+              <label class="mdl-textfield__label" for="location">Change your look?(Image URL)</label>
+              <input class="mdl-textfield__input" type="text" name="picture" value="<%= @user.picture %>">
+            </div>
+
+            <div class="mdl-card__actions mdl-card--border">
+              <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/users/<%= @user.id %>/edit">
+                Update Details
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div></main>
