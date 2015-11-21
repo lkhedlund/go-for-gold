@@ -3,7 +3,7 @@
 <div class="mdl-grid">
 <div class="mdl-cell--middle mdl-cell--4-col">
 
-<form method="post" action=<%="/groups/#{@group_id}/activities/#{@id}"%>>
+<form method="post" action="/groups/<%=@group_id%>/activities/<%=@activity.id%>">
   <input type="hidden" name="_method" value="PUT" />
 
   <div class="mdl-textfield mdl-js-textfield">
