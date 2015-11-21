@@ -1,10 +1,15 @@
-Sinatra
-=============
+#Go for Gold
+A competitive approach to everyday activities!
 
-Brought to you by Lighthouse Labs
+## Promo
+Do you feel like you're always playing frisbee by yourself? Is the rat race keeping you from getting exercise?
 
-## Getting Started
+That ends today!
 
-1. `bundle install`
-2. `shotgun -p 3000 -o 0.0.0.0`
-3. Visit `http://localhost:3000/` in your browser
+Meet Go for Gold!, a more competitive approach to activities that would otherwise just be 'fun'. Now you can guilt your friends into joining you for any activity you choose! Want to play soccer on Saturday? Create a group with your friends, add an activity, and watch as Jim (who would rather 'take care of his kid') is outranked by everyone else in your social circle! He'll feel so bad about not coming to your fifth ultimate frisbee session that he'll be there next time, no matter the consequences.
+
+## Features
+- Responsive to phone, tablet, or PC: guilt on the go!
+- Create a group and ask your friends to join to start tracking your badges!
+- Your rank is sorted against others in your group (whoever has the most badges wins)
+- Not sure where Location X is? Google maps will tell you!
