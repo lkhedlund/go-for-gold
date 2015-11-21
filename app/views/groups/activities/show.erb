@@ -1,3 +1,8 @@
+<%= erb :'_drawer' %>
+  <main class="mdl-layout__content mdl-color--grey-100"><div class="mdl-grid content">
+      <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+        <div class="mdl-card__supporting-text">
+
 <div class="mdl-grid">
   <div class="mdl-cell--middle mdl-cell--6-col">
   
@@ -14,12 +19,19 @@
     <p>
       Location: <%= @activity.location %>
     </p>
+  <p>
+  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit">Edit activity</a>  
+  </p>
 
   <a href="/groups/<%= @group_id %>"><i class="material-icons">keyboard_backspace</i></a>
 
-  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit">Edit activity</a>  
   </div>
 </div>
+
+  </div>
+</div>
+
+</div></main>
 
 
 
