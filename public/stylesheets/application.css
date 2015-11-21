@@ -52,6 +52,7 @@ a {
   background-color: #00BCD4;
   color: #37474F;
 }
+
 .mdl-navigation__link .material-icons {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.56);
@@ -137,4 +138,15 @@ a {
 .activity-button {
   font-size: 70px;
   padding: 100px;
+}
+
+/* Leave Button */
+.leave_button {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+  font-size: 24px;
+  padding: 30px;
 }
