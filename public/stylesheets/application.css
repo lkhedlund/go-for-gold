@@ -6,7 +6,7 @@ html, body {
   width: 48px;
   height: 48px;
   border-radius: 24px;
-  padding: 2px;
+  margin-right: 5px;
 }
 
 .mdl-textfield {
@@ -40,6 +40,7 @@ html, body {
   align-items: center;
   color: rgba(255, 255, 255, 0.56);
   font-weight: 500;
+  font-size: 24px;
 }
 
 .mdl-navigation__link:hover {
@@ -56,15 +57,27 @@ html, body {
   max-width: 1080px;
 }
 
-/* Cards */
+/* Full Page */
 
-.main-card-wide.mdl-card {
+.full-card-wide.mdl-card {
   width: 1080px;
 }
-.main-card-wide > .mdl-card__title {
+.full-card-wide > .mdl-card__title {
+  min-height: 400px;
+}
+
+/* Group cards */
+
+.group-card-wide.mdl-card {
+  width: 1080px;
+}
+
+.group-card-wide > .mdl-card__title {
   height: 230px;
   background: url('/images/gold-medal.jpg') center / cover;
 }
+
+/* Result cards */
 
 .result-card-square.mdl-card {
   width: 320px;
@@ -75,12 +88,47 @@ html, body {
   background: #46B6AC;
 }
 
+/* Form Cards */
+
 .form-card.mdl-card {
   color: #fff;
   width: 320px;
   height: 320px;
 }
 
-.mdl-textfield__label {
+.form-card > .mdl-textfield__label {
   color: #b3b3b3;
+}
+
+/* Activity cards */
+
+.activity-card-event.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: #3E4EB8;
+}
+.activity-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.activity-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.activity-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.activity-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.activity-card-event > .mdl-card__title,
+.activity-card-event > .mdl-card__actions,
+.activity-card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+
+/* Add Activity */
+.activity-button {
+  font-size: 70px;
+  padding: 100px;
 }
