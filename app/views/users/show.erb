@@ -1,25 +1,29 @@
 <%= erb :'_drawer' %>
-<p>
-  <img src="<%= @user.picture %>" />
-</p>
+<div class="mdl-grid">
+  <div class="mdl-cell--middle mdl-cell--6-col">
+    <p>
+      <img src="<%= @user.picture %>" />
+    </p>
 
-<p>
-  <strong>Name:</strong> <%= @user.name %>
-</p>
+    <p>
+      <strong>Name:</strong> <%= @user.name %>
+    </p>
 
-<p>
-  <strong>City:</strong> <%= @user.city %>
-</p>
+    <p>
+      <strong>City:</strong> <%= @user.city %>
+    </p>
 
-<p>
-  <strong>Details:</strong> <%= @user.description %>
-</p>
+    <p>
+      <strong>Details:</strong> <%= @user.description %>
+    </p>
 
- <p>
-  <strong><span class="mdl-badge" data-badge="<%= @user.badge_count %>">Badges</span></strong>
-</p>
+    <p>
+      <strong><span class="mdl-badge" data-badge="<%= @user.badge_count %>">Badges</span></strong>
+    </p>
 
-<hr/>
-<strong><a href="/">Take me home!</a></strong>
-
+    <hr/>
+  <strong><a href="/">Take me home,</a> or <a href="/users/<%= @user.id %>/edit">I want to change something</a></strong>
+  </div>
+</div>
 </main>
+

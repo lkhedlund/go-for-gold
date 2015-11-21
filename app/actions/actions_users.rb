@@ -1,5 +1,4 @@
 
-
 post '/users/new' do
   @user = User.new(
   name: params[:name],
@@ -23,6 +22,13 @@ get '/users/:id' do
   @user = User.find params[:id]
   @users = User.where(name: @user.name)
   erb :'users/show'
+end
+
+
+get '/users/:id/edit' do |id|
+  @user_id = id
+  @user = User.find(@user_id)
+  erb :'/users/edit'
 end
 
 # post '/users' do
