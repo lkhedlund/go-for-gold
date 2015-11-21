@@ -5,7 +5,7 @@ class Activity < ActiveRecord::Base
   has_many :users, through: :rsvps
 
   validates :name,
-    presence: true
+    presence: true, length: { minimum: 3, maximum: 60 }
   validates :location,
     presence: true
   validates :completed,
