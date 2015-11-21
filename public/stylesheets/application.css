@@ -31,7 +31,8 @@ a {
 .drawer-header {
   box-sizing: border-box;
   justify-content: flex-end;
-  padding: 20px;
+  padding: 30px;
+  font-size: 20px;
 }
 
 .mdl-navigation {
@@ -100,8 +101,9 @@ a {
   height: 320px;
 }
 
-.form-card > .mdl-textfield__label {
-  color: #b3b3b3;
+.form-card > .mdl-card__actions {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Activity cards */
