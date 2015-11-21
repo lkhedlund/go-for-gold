@@ -1,6 +1,6 @@
 get '/groups/:group_id' do |id|
   @group = Group.find(id)
-  session[:group_users] = @group.users.all
+  session[:group] = @group
   erb :'groups/show'
 end
 

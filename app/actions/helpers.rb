@@ -10,8 +10,8 @@ helpers do
     #@current_user = User.find(session[:user_id]) if session[:user_id]
 	end
 
-	def group_users
-		session[:group_users] = []
+	def current_group
+		session[:group] = nil
 	end
 
 end
@@ -19,5 +19,5 @@ end
 before do
 	current_user
 	handle_errors
-	group_users
+	current_group
 end

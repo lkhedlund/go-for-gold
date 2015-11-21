@@ -5,8 +5,8 @@
     <div class="mdl-layout-spacer"></div>
   </header>
   <nav class="mdl-navigation mdl-color--blue-grey-800">
-    <% if !session[:group_users].empty? %>
-      <% session[:group_users].order("badge_count desc").each do |user| %>
+    <% unless session[:group].nil? %>
+      <% session[:group].users.all.order("badge_count desc").each do |user| %>
         <div class="mdl-navigation__link">
           <img src="<%= user.picture %>" width="40" height="40" role="presentation" class="avatar">
         <span class="mdl-badge" data-badge="<%= user.badge_count %>"><%= user.name %></span>
