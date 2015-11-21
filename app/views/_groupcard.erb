@@ -7,7 +7,7 @@
     <strong>Members:</strong>
     <% if group.users.length > 0 %>
       <% group.users.each do |user|%>
-        <%= user.name %>,
+        <%= user.name %>
       <% end %>
     <% else %>
       No members
@@ -19,10 +19,10 @@
           View
         </a>
       <% else %>
-      <form method="post" action="/groups/join">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      <form method="post" action="/groups/join/<%= group.id %>">
+        <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
           Join
-        </a>
+        </button>
       </form>
       <% end %>
     </a>

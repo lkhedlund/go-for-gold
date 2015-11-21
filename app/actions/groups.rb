@@ -15,6 +15,9 @@ post '/groups' do
   end
 end
 
-post '/groups/join' do
-  
+post '/groups/join/:id' do |id|
+  puts "Called join action"
+  group = Group.find(id)
+  group.users << @current_user
+  redirect "/groups/#{id}"
 end
