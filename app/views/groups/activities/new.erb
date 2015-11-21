@@ -2,35 +2,28 @@
   <main class="mdl-layout__content mdl-color--grey-100"><div class="mdl-grid content">
       <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
         <div class="mdl-card__supporting-text">
-        <h1>Create an activity</h1>
-        <form method="post" action=<%="/groups/"+@group_id%>>
-
+          <h1>Create an activity</h1>
+          <form method="post" action=<%="/groups/"+@group_id%>>
           <div class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" for="name">Name...</label>
             <input class="mdl-textfield__input" type="text" name="name" value="<%= @activity.name %>">
           </div>
-
           <div class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" for="date">Date...</label>
             <input class="mdl-textfield__input" type="text" name="date" value="<%= @activity.date %>">
           </div>
-
           <div class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" for="time">Time...</label>
             <input class="mdl-textfield__input" type="text" name="time" value="<%= @activity.time %>">
           </div>
-
           <div class="mdl-textfield mdl-js-textfield">
             <label class="mdl-textfield__label" for="location">Location...</label>
             <input class="mdl-textfield__input" type="text" name="location" value="<%= @activity.location %>">
           </div>
-
-    <div class="mdl-card__actions">
-      <button type="submit" value="Submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Create</button>
-        </form>
+          <div class="mdl-card__actions">
+          <button type="submit" value="Submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Create</button>
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-</div>
-</main>
+  </main>

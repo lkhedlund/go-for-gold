@@ -2,44 +2,35 @@
   <main class="mdl-layout__content mdl-color--grey-100"><div class="mdl-grid content">
       <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
         <div class="mdl-card__supporting-text">
-<h1>Edit event</h1>
-
-<div class="mdl-grid">
-<div class="mdl-cell--middle mdl-cell--4-col">
-
-<form method="post" action="/groups/<%=@group_id%>/activities/<%=@activity.id%>">
-  <input type="hidden" name="_method" value="PUT" />
-
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="name">Name...
-    </label>
-    <input class="mdl-textfield__input" type="text" name="name" value="<%= @activity.name %>">
-  </div>
-  
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="date">Date...</label>
-    <input class="mdl-textfield__input" type="text" name="date" value="<%= @activity.date %>">
-  </div>
-
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="time">Time...</label>
-    <input class="mdl-textfield__input" type="text" name="time" value="<%= @activity.time %>">
-  </div>
-  
-  <div class="mdl-textfield mdl-js-textfield">
-    <label class="mdl-textfield__label" for="location">Location...</label>
-    <input class="mdl-textfield__input" type="text" name="location" value="<%= @activity.location %>">
-  </div>
-  
-  <p>
-    <button type="submit" value="Submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Update</button>
-  </p>
-</form>
-</div>
-</div> 
-
-  </div>
-</div>
-
-</div></main>
+          <h1>Edit event</h1>
+          <div class="mdl-grid">
+            <div class="mdl-cell--middle mdl-cell--4-col">
+              <form method="post" action="/groups/<%=@group_id%>/activities/<%=@activity.id%>">
+                <input type="hidden" name="_method" value="PUT" />
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="mdl-textfield__label" for="name">Name...</label>
+                    <input class="mdl-textfield__input" type="text" name="name" value="<%= @activity.name %>">
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="mdl-textfield__label" for="date">Date...</label>
+                    <input class="mdl-textfield__input" type="text" name="date" value="<%= @activity.date %>">
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="mdl-textfield__label" for="time">Time...</label>
+                    <input class="mdl-textfield__input" type="text" name="time" value="<%= @activity.time %>">
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield">
+                    <label class="mdl-textfield__label" for="location">Location...</label>
+                    <input class="mdl-textfield__input" type="text" name="location" value="<%= @activity.location %>">
+                  </div>
+                  <p>
+                    <button type="submit" value="Submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Update</button>
+                  </p>
+              </form>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </main>
 

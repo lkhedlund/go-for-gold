@@ -41,6 +41,7 @@ end
 get '/groups/:group_id/activities/:id' do
   @group_id = params[:group_id]
   @activity = Activity.find params[:id]
+  @location = params[:location]
   erb :'/groups/activities/show'
 end
 
