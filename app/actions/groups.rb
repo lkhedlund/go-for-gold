@@ -16,4 +16,5 @@ post '/groups' do
 end
 
 post '/groups/join' do
+  
 end
