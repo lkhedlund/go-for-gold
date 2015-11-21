@@ -15,8 +15,14 @@ post '/groups' do
   end
 end
 
-post '/groups/join/:id' do |id|
+post '/groups/join/:group_id' do |id|
   group = Group.find(id)
   group.users << @current_user
   redirect "/groups/#{id}"
+end
+
+delete '/groups/leave/:group_id' do |id|
+  group = Group.find(id)
+  group.users.delete(@current_user)
+  redirect "/"
 end

@@ -12,9 +12,15 @@
         <span class="mdl-badge" data-badge="<%= user.badge_count %>"><%= user.name %></span>
         </div>
       <% end %>
+      <div class="mdl-layout-spacer"></div>
+        <div class="leave_button">
+          <form method="post" action="/groups/leave/<%= session[:group].id %>">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button class="mdl-button mdl-color-text--blue-grey-400">
+              <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">do_not_disturb</i> Leave Group
+            </button>
+          </form>
+        </div>
     <% end %>
-
-    <div class="mdl-layout-spacer"></div>
-    <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">clear</i><span>Sign Out</span></a>
   </nav>
 </div>

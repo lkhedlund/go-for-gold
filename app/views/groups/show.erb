@@ -3,7 +3,7 @@
     <div class="activity-button mdl-cell mdl-cell--3-col">
       <a href="/groups/<%= @group.id %>/activities/new"><button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"><i class="material-icons">add</i></button></a>
     </div>
-    <% @group.activities.each do |activity| %>
+    <% @group.activities.order("date asc").each do |activity| %>
        <div class="activity-card-event mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
          <div class="mdl-card__title mdl-card--expand">
             <h4><%= activity.name %>:<br>

@@ -21,7 +21,6 @@
                     <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</button>
                 </form>
               </p>
-            <a href="/groups/<%= @group_id %>"><i class="material-icons">arrow_back</i></a>
           </div>
           <div class="mdl-cell--middle mdl-cell--6-col">
             <iframe
@@ -30,6 +29,11 @@
               frameborder="0" style="border:0"
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBZRmm_73dV6GduBRl7KidmD-SxFPHmNgs&q=<%=@activity.location%>" allowfullscreen>
             </iframe>
+          </div>
+          <div class="mdl-card__menu">
+            <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="/groups/<%= @group_id %>">
+              <i class="material-icons">close</i>
+            </a>
           </div>
         </div>
       </div>
