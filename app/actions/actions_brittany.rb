@@ -1,5 +1,4 @@
 put '/groups/:group_id/activities/:id' do |group_id, id|
-  @group_id = params[:group_id]
   @activity = Activity.find(id)
   @activity.update_attributes(
   name: params[:name],
@@ -7,10 +6,10 @@ put '/groups/:group_id/activities/:id' do |group_id, id|
   date: params[:date],
   location: params[:location],
   completed: false,
-  group_id: params[:group_id]
+  group_id: group_id
   )
   if @activity.save
-    redirect "/groups/#{@group_id}/activities/#{id}"
+    redirect "/groups/#{group_id}/activities/#{id}"
   else
     erb :'/groups/activities/edit'
   end
@@ -51,8 +50,7 @@ get '/groups/:group_id/activities/:id/edit' do
   erb :'/groups/activities/edit'
 end
 
-get '/groups/:group_id/activities/:id/delete' do |group_id, id|
-  # @group_id = params[:group_id]
+delete '/groups/:group_id/activities/:id' do |group_id, id|
   @activity = Activity.find(id)
   @activity.destroy
   redirect "/groups/#{group_id}"

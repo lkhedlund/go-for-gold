@@ -21,9 +21,15 @@
     </p>
   <p>
 
-  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Edit</a>
+  <!-- <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Edit</a> -->
 
-  <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/delete" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</a>
+  <form action="/groups/<%=@group_id%>/activities/<%=@activity.id%>" method="post">
+    <input type="hidden" name="_method" value="DELETE" />
+    <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Edit</a>
+    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</button>
+  </form>
+
+  <!-- <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/delete" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</a> -->
 
   <!-- <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit">Edit activity</a>  --> 
   </p>
