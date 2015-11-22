@@ -13,3 +13,23 @@ Meet Go for Gold!, a more competitive approach to activities that would otherwis
 - Create a group and ask your friends to join to start tracking your badges!
 - Your rank is sorted against others in your group (whoever has the most badges wins)
 - Not sure where Location X is? Google maps will tell you!
+
+## Setup
+
+If you want to get the demo up and running, you'll need to take the following steps:
+- Create the database with the following commands:
+```
+rake db:create
+rake db:migrate
+rake db:populate
+```
+- Run shotgun in your terminal
+```
+shotgun
+```
+- Load your localhost and port in the url with the admin user
+```
+http://localhost:3000/admin/1
+*you can change users to 2, 3, 4*
+```
+- Enjoy!

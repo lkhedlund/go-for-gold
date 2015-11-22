@@ -21,11 +21,13 @@
             <strong><span class="mdl-badge" data-badge="<%= @user.badge_count %>">Badges</span></strong>
           </p>
         </div>
+        <% if @user == @current_user %>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/users/<%= @user.id %>/edit">
             Edit Details
           </a>
         </div>
+        <% end %>
         <div class="mdl-card__menu">
           <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="/">
             <i class="material-icons">close</i>
