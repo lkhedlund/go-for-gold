@@ -7,10 +7,10 @@
   <nav class="mdl-navigation mdl-color--blue-grey-800">
     <% unless session[:group].nil? %>
       <% session[:group].users.all.order("badge_count desc").each do |user| %>
-        <div class="mdl-navigation__link">
+        <a class="mdl-navigation__link" href="/users/<%= user.id %>">
           <img src="<%= user.picture %>" width="40" height="40" role="presentation" class="avatar">
         <span class="mdl-badge" data-badge="<%= user.badge_count %>"><%= user.name %></span>
-        </div>
+        </a>
       <% end %>
       <div class="mdl-layout-spacer"></div>
         <div class="leave_button">
