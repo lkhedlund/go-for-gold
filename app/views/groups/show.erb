@@ -14,6 +14,15 @@
           <a href="/groups/<%= activity.group_id %>/activities/<%= activity.id %>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             View
           </a>
+          <form method="post" action="/groups/<%= activity.group_id %>/activities/<%= activity.id %>/rsvp">
+            <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              <% if activity.users.include? @current_user %>
+                Unattend
+              <% else %>
+                Attend
+              <% end %>
+            </button>
+          </form>
           <div class="mdl-layout-spacer"></div>
           <i class="material-icons">event</i>
         </div>

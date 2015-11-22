@@ -13,7 +13,7 @@ put '/groups/:group_id/activities/:id' do |group_id, id|
   else
     erb :'/groups/activities/edit'
   end
-end  
+end
 
 get '/groups/:group_id/activities/new' do
   @group_id = params[:group_id]
@@ -56,4 +56,3 @@ delete '/groups/:group_id/activities/:id' do |group_id, id|
   @activity.destroy
   redirect "/groups/#{group_id}"
 end
-
