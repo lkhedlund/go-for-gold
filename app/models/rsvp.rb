@@ -1,6 +1,6 @@
-class RSVP < ActiveRecord::Base
+class Rsvp < ActiveRecord::Base
 
   belongs_to :user
-  belongs_to :group
+  belongs_to :activity
 
 end
