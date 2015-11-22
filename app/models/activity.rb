@@ -6,8 +6,12 @@ class Activity < ActiveRecord::Base
 
   validates :name,
     presence: true, length: { minimum: 3, maximum: 60 }
-  validates :location,
+  validates :date,
     presence: true
+  validates :time,
+    presence: true 
+  validates :location,
+    presence: true, length: { minimum: 3, maximum: 60 }
   validates :completed,
     inclusion: [true, false]
   validates :group_id,
