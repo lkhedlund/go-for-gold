@@ -15,12 +15,22 @@
                 Location: <%= @activity.location %>
               </p>
               <p>
+                Attendees:
+                <% if @activity.users.all.length > 0 %>
+                  <% @activity.users.all.each do |user|%>
+                    <%= user.name %>
+                  <% end %>
+                <% else %>
+                  No RSVPs
+                <% end %>
+              </p>
+              <div class="mdl-card__actions mdl-card--border">
                 <form action="/groups/<%=@group_id%>/activities/<%=@activity.id%>" method="post">
                   <input type="hidden" name="_method" value="DELETE" />
                     <a href="/groups/<%=@group_id%>/activities/<%=@activity.id%>/edit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Edit</a>
                     <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Delete</button>
                 </form>
-              </p>
+              </div>
           </div>
           <div class="mdl-cell--middle mdl-cell--6-col">
             <iframe
